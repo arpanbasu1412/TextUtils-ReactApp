@@ -63,7 +63,7 @@ export default function TextForm(props) {
         <button
           type="button"
           onClick={handleUpClick}
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
         >
           Convert to Uppercase
         </button>
@@ -77,21 +77,21 @@ export default function TextForm(props) {
         <button
           type="button"
           onClick={handleClearClick}
-          className="btn btn-primary mx-2"
+          className="btn btn-primary mx-1 my-1"
         >
           Clear Text
         </button>
         <button
           type="button"
           onClick={handleCopy}
-          className="btn btn-primary mx-2"
+          className="btn btn-primary mx-1 my-1"
         >
           Copy Text
         </button>
         <button
           type="button"
           onClick={handleExtraSpaces}
-          className="btn btn-primary mx-2"
+          className="btn btn-primary mx-1 my-1"
         >
           Remove Extra Spaces
         </button>
@@ -99,7 +99,7 @@ export default function TextForm(props) {
       <div className="container my-3" style={{color: props.mode==='dark'?'white':'black'}}>
         <h2>Your Text Summary</h2>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters
         </p>
         <p>{0.008 * text.split(" ").length} Minutes Read</p>
         <h2>Preview</h2>
