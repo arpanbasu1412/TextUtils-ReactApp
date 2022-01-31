@@ -30,12 +30,12 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode has been enabled", "success");
-      document.title = "TextUtlis - Dark Mode";
+    //   document.title = "TextUtlis - Dark Mode";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled", "success");
-      document.title = "TextUtlis - Light Mode";
+    //   document.title = "TextUtlis - Light Mode";
     }
   };
 
@@ -53,9 +53,16 @@ function App() {
         <div className="container my-3">
           <Switch>
             <Route exact path="/about">
-              <About />
+              <About mode={mode}/>
             </Route>
             <Route exact path="/">
+              <TextForm
+                showAlert={showAlert}
+                heading="Format Your Text"
+                mode={mode}
+              />
+            </Route>
+            <Route exact path="/TextUtils-ReactApp">
               <TextForm
                 showAlert={showAlert}
                 heading="Format Your Text"
