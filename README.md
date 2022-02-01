@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was hosted on https://arpanbasu1412.github.io/TextUtils-ReactApp/
+This project is hosted on https://arpanbasu1412.github.io/TextUtils-ReactApp/
 
 ## Available Scripts
 
